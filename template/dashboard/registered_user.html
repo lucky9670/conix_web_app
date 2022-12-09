@@ -1,0 +1,98 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Registered User</h4>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="box">
+                        
+
+                        <div class="info">
+                            <div class="container" style="text-align:center;">
+                                <h1>Users</h1>
+                                <br>
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr No.</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Aadhar Number</th>
+                                                    <th>PAN Number</th>
+                                                    <th>Bank Name</th>
+                                                    <th>Branch</th>
+                                                    <th>Account</th>
+                                                    <th>IFSC Code</th>
+                                                    <th>Account Holder</th>
+                                                    <th>Join Date</th>
+                                                    <th>Referal Code</th>
+                                                    <th>Refered By</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in data %}
+                                                  
+                                                
+                                                <tr>
+                                                    <td>{{forloop.counter}}</td>
+                                                    
+                                                    <td><a href="{% url 'transection_detail' i.id %}">{{i.name}}</a></td>
+                                                    
+                                                    <td>{{i.email}}</td>
+                                                    <td>{{i.phone}}</td>
+                                                    <td>{{i.aadhar_number}}</td>
+                                                    <td>{{i.pan_number}}</td>
+                                                    <td>{{i.bank_name}}</td>
+                                                    <td>{{i.branch}}</td>
+                                                    <td>{{i.account_number}}</td>
+                                                    <td>{{i.ifsc_code}}</td>
+                                                    <td>{{i.account_holder}}</td>
+                                                    <td>{{i.date_time}}</td>
+                                                    <td>{{i.referal_code}}</td>
+                                                    <td>{{i.refered_by}}</td>
+        
+                                                   
+                                                </tr>
+                                                {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock %}

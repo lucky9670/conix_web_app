@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="{% static 'assets/images/favicon.ico' %}">
+
+    <title>RECTOCOIN Admin - Responsive Bootstrap Admin HTML Templates + Bitcoin Dashboards + ICO </title>
+
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="{% static 'dashboard_assets/css/vendors_css.css' %}">
+
+    <!-- Style-->
+    <link rel="stylesheet" href="{% static 'dashboard_assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard_assets/css/skin_color.css' %}">
+
+    <style>
+        .new1 {
+            margin-left: 100px;
+            margin-right: 100px !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            .new1 {
+                margin-right: 0px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="hold-transition dark-skin sidebar-mini theme-warning fixed">
+
+    <div class="wrapper">
+        <div id="loader"></div>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper new1">
+            <div class="container-full">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto">
+                            <h4 class="page-title">User Registration</h4>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main content -->
+                <section class="content">
+
+
+
+                    <!-- Validation wizard -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Step Wise User Registration</h4>
+                            {% if error %}
+								<p class="mb-0 mt-2 text-danger">{{ error }}</p>
+								{% endif %}		
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body wizard-content">
+                            <form action="" method="post" class="validation-wizard wizard-circle" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <!-- Step 1 -->
+                                <h6>Personal Info</h6>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="wfirstName2" class="form-label"> Name : <span
+                                                        class="danger">*</span> </label>
+                                                <input type="text" class="form-control required" id="wfirstName2"
+                                                    name="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="wemailAddress2" class="form-label"> Email Address : <span
+                                                        class="danger">*</span> </label>
+                                                <input type="email" class="form-control required" id="wemailAddress2"
+                                                    name="email">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="wphoneNumber2" class="form-label">Phone Number :<span
+                                                        class="danger">*</span> </label>
+                                                <input type="text" class="form-control required" id="wphoneNumber2"
+                                                    name="phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="referal" class="form-label"> Referal Code : <span
+                                                        class="danger">*</span> </label>
+                                                <input type="text" class="form-control required" id="referal"
+                                                    name="referal_code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="password1" class="form-label"> Password : <span
+                                                        class="danger">*</span> </label>
+                                                <input type="password" class="form-control required" id="password1"
+                                                    name="password1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="password2" class="form-label"> Confirm Password : <span
+                                                        class="danger">*</span> </label>
+                                                <input type="password" class="form-control required" id="password2"
+                                                    name="password2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- Step 2 -->
+                                <h6>Proffessional Info</h6>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="aadhar" class="form-label">Aadhar Number :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="aadhar_number" class="form-control required"
+                                                    id="aadhar">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="pan" class="form-label">PAN Number :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="pan_number" class="form-control required"
+                                                    id="pan">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="pan_name" class="form-label">Name as PAN :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="name_as_pan" class="form-control required"
+                                                    id="pan_name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="city123" class="form-label">City :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="city" class="form-control required"
+                                                    id="city123">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="state123" class="form-label">State :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="state" class="form-control required"
+                                                    id="state123">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="pan_photo" class="form-label">PAN Photo :</label><span
+                                                class="danger">*</span>
+                                                <input type="file" name="pan_photo" class="form-control required"
+                                                    id="pan_photo">
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+                                </section>
+                                <!-- Step 3 -->
+                                <h6>Bank Details</h6>
+                                <section>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="bank_name" class="form-label">Bank Name :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="bank_name" class="form-control required"
+                                                    id="bank_name">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="branch_name" class="form-label">Bank Branch :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="branch" class="form-control required"
+                                                    id="branch_name">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="account1" class="form-label">Account Number :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="account1" class="form-control required"
+                                                    id="account1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="account2" class="form-label">Re-Type Account Number
+                                                    :</label>
+                                                <input type="text" name="account2" class="form-control required"
+                                                    id="account2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="wint1" class="form-label">IFSC Code :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="ifsc" class="form-control required" id="wint1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="ifsc" class="form-label">Account Holder Name :</label><span
+                                                class="danger">*</span>
+                                                <input type="text" name="account_holder" class="form-control required"
+                                                    id="ifsc">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="upi" class="form-label">UPI ID :</label>
+                                                <input type="text" name="upi_id" class="form-control" id="upi">
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+
+                                </section>
+
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+                </section>
+                <!-- /.content -->
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- Page Content overlay -->
+
+
+    <!-- Vendor JS -->
+    <script src="{% static 'dashboard_assets/js/vendors.min.js' %}"></script>
+    <script src="{% static 'dashboard_assets/js/pages/chat-popup.js' %}"></script>
+    <script src="{% static 'assets/icons/feather-icons/feather.min.js' %}"></script>
+    <script src="{% static 'assets/vendor_components/jquery-steps-master/build/jquery.steps.js' %}"></script>
+    <script src="{% static 'assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/vendor_components/sweetalert/sweetalert.min.js' %}"></script>
+    <!-- RECTOCOIN Admin App -->
+    <script src="{% static 'dashboard_assets/js/template.js' %}"></script>
+    <script src="{% static 'dashboard_assets/js/pages/steps.js' %}"></script>
+
+
+
+
+</body>
+
+</html>

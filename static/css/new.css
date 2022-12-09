@@ -1,0 +1,619 @@
+/*All Sports Section Starts Here*/
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.section-header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.section-header .cate {
+font-size: 24px;
+font-weight: 500;
+text-transform: capitalize;
+color: #a4a5a9;
+display: block;
+margin-bottom: 8px;
+}
+
+.all-sports ul li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    height: 128px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.all-sports ul li:after {
+    position: absolute;
+    content: '';
+    background: url('../images/play-all-game/back-border.png');
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    height: 128px;
+}
+
+.all-sports ul li span {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.all-sports ul li span img {
+    width: 110px;
+}
+
+.all-sports ul li:hover span img {
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform-origin: 50% 100%;
+}
+
+@-webkit-keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-2deg);
+    }
+
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(3deg);
+    }
+
+    30% {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        -webkit-transform: translate(2px, 1px) rotate(-2deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(4deg);
+    }
+
+    90% {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@media (max-width: 770px) {
+    .all-sports .tab-area img {
+        max-width: 100%;
+    }
+
+    .all-sports ul li {
+        height: 84px;
+        width: 100%;
+    }
+
+    .all-sports ul li:after {
+        height: 84px;
+    }
+}
+
+/*All Sports Section Ends Here*/
+
+/*How Section Starts Here*/
+.hover-tab-menu {
+position: relative;
+overflow: hidden;
+}
+
+.hover-tab-menu .tab-menu {
+position: relative;
+z-index: 1;
+}
+
+.hover-tab-menu .tab-menu li {
+    align-items: center;
+    padding: 0;
+    margin-bottom: 90px;
+    cursor: grab;
+}
+
+    .hover-tab-menu .tab-menu li .menu-thumb {
+        padding: 5px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 1px solid #bad0fb;
+        width: 65px;
+        height: 65px;
+    }
+
+        .hover-tab-menu .tab-menu li .menu-thumb span {
+            line-height: 53px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 36px;
+            background-color: #e3ecfd;
+            width: 53px;
+            display: inline-block;
+            color: #33406a;
+        }
+
+    .hover-tab-menu .tab-menu li .menu-content {
+        width: calc(100% - 170px);
+        padding-left: 30px;
+    }
+
+        .hover-tab-menu .tab-menu li .menu-content p {
+            line-height: 18px;
+            font-size: 16px;
+        }
+
+.details-cntr .bg-primary {
+border-radius: 8px;
+box-shadow: 0px 0px 8px #1f1f4e;
+}
+
+.bg-primary {
+background-color: #253165 !important;
+}
+
+.hover-tab-menu .tab-menu li .menu-content .title {
+text-transform: uppercase;
+}
+
+.hover-tab-menu .tab-menu li.active .menu-thumb span {
+background: #324fb0;
+color: #ffffff;
+animation-name: fadeIn;
+-webkit-animation-name: fadeIn;
+-moz-animation-name: fadeIn;
+animation-duration: .5s;
+-webkit-animation-duration: .5s;
+-moz-animation-duration: .5s;
+}
+
+.hover-tab-menu .tab-menu li:nth-child(2) {
+-webkit-transform: translateX(95px);
+-ms-transform: translateX(95px);
+transform: translateX(95px);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.hover-tab-menu .tab-menu li:nth-child(2) {
+-webkit-transform: translateX(75px);
+-ms-transform: translateX(75px);
+transform: translateX(75px);
+}
+
+.hover-tab-menu .tab-menu li:nth-child(2) .menu-content {
+    max-width: 320px;
+}
+}
+
+@media (max-width: 991px) {
+.hover-tab-menu .tab-menu li:nth-child(2) {
+-webkit-transform: translateX(0);
+-ms-transform: translateX(0);
+transform: translateX(0);
+}
+}
+
+@media (max-width: 991px) {
+.hover-tab-menu .tab-menu li {
+margin-bottom: 50px;
+}
+}
+
+@media (max-width: 575px) {
+.hover-tab-menu .tab-menu li {
+margin-bottom: 40px;
+}
+
+.hover-tab-menu .tab-menu li .menu-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+    .hover-tab-menu .tab-menu li .menu-thumb span {
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        font-size: 24px;
+    }
+
+.hover-tab-menu .tab-menu li .menu-content {
+    padding-left: 15px;
+    width: calc(100% - 50px);
+}
+
+    .hover-tab-menu .tab-menu li .menu-content .title {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.hover-tab-menu .tab-menu li:nth-child(1) .menu-thumb {
+position: relative;
+}
+
+.hover-tab-menu .tab-menu li:nth-child(1) .menu-thumb:after {
+bottom: 60%;
+right: 60%;
+background: #252a4a;
+width: 50px;
+height: 50px;
+z-index: -1;
+}
+
+.hover-tab-menu .tab-menu li:nth-child(3) .menu-thumb {
+position: relative;
+}
+
+.hover-tab-menu .tab-menu li:nth-child(3) .menu-thumb:after {
+top: 60%;
+right: 60%;
+background: #252a4a;
+width: 50px;
+height: 50px;
+z-index: -1;
+}
+
+.hover-tab-menu .tab-menu li:last-child {
+margin: 3px;
+}
+
+.hover-tab-menu::after, .hover-tab-menu::before {
+width: 600px;
+height: 600px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+top: -37px;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+.hover-tab-menu::after, .hover-tab-menu::before {
+width: 680px;
+height: 680px;
+top: -77px;
+}
+}
+
+@media (max-width: 991px) {
+.hover-tab-menu::after, .hover-tab-menu::before {
+display: none;
+}
+}
+
+.hover-tab-menu::before {
+right: 75%;
+border: 9px solid #e3ebfc;
+}
+
+.hover-tab-menu::after {
+border: 2px dashed #324fb0;
+right: calc(75% + 4px);
+animation: rotate2 2s linear infinite;
+}
+
+.hover-tab-area .tab-area {
+width: 540px;
+height: 540px;
+position: relative;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+background-color: rgba(38, 78, 213, 0.102);
+overflow: hidden;
+}
+
+.hover-tab-area .tab-area::after, .hover-tab-area .tab-area::before {
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+background-color: rgba(38, 78, 213, 0.102);
+}
+
+.hover-tab-area .tab-area::before {
+width: 468px;
+height: 468px;
+}
+
+.hover-tab-area .tab-area::after {
+width: 386px;
+height: 386px;
+}
+
+.hover-tab-area .tab-area * {
+position: relative;
+z-index: 1;
+}
+
+.hover-tab-area .tab-area .tab-item {
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9;
+}
+
+.hover-tab-area .tab-area .tab-item img {
+    max-height: 300px;
+    max-width: 300px;
+    z-index: 99;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.hover-tab-area .tab-area .tab-item.active img {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hover-tab-area .tab-area .tab-item.first {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+.hover-tab-area .tab-area .tab-item.second {
+    animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+.hover-tab-area .tab-area .tab-item.third {
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+/*How Section Ends Here*/
+
+
+
+/*Features Start*/
+
+#features {
+    position: relative;
+    background-size: cover;
+    color: #ffffff;
+}
+
+    #features .overlay {
+        opacity: 0.95;
+    }
+
+    #features .container {
+        position: relative;
+        z-index: 10;
+    }
+
+    #features .single-feature {
+        padding: 0.5rem;
+        margin-bottom: 15px;
+    }
+
+    #features h6 {
+        margin-bottom: 2px;
+    }
+
+    #features .reflection-text, #features h6, #features p, #features a, #features i {
+        color: inherit;
+    }
+
+    #features .feature-left a {
+        text-align: right;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+        #features .feature-left a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20%;
+            width: 0;
+            height: 2px;
+            background-color: #0a0e0a;
+            opacity: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: width 0.4s ease-out;
+            transition: width 0.4s ease-out;
+        }
+
+        #features .feature-left a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -21%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0a0e0a;
+            opacity: 0;
+            -webkit-transform: translateY(-48%);
+            transform: translateY(-48%);
+            -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+        }
+
+    #features .feature-right a {
+        text-align: left;
+        -webkit-transition: width 0.4s ease-out;
+        transition: width 0.4s ease-out;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+        #features .feature-right a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            width: 0;
+            height: 2px;
+            background-color: #0a0e0a;
+            opacity: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: width 0.4s ease-out;
+            transition: width 0.4s ease-out;
+        }
+
+        #features .feature-right a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -21%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0a0e0a;
+            opacity: 0;
+            -webkit-transform: translateY(-48%);
+            transform: translateY(-48%);
+            -webkit-transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out;
+        }
+
+.hoverable:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+#features .feature-link {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+}
+
+    #features .feature-link.active {
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+        #features .feature-link.active i::after {
+            -webkit-animation: rotateEffect 8s linear infinite;
+            animation: rotateEffect 8s linear infinite;
+            display: block;
+        }
+
+    /*#features .feature-link.active::after {
+                opacity: 1;
+                width: 30%
+            }*/
+
+    /*#features .feature-link.active::before {
+                opacity: 1
+            }*/
+
+    #features .feature-link i {
+        position: relative;
+        margin: 0 1rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+        text-align: center;
+        font-size: 2rem;
+        line-height: 4rem;
+        background: rgba(0,0,0,0.42);
+    }
+
+        #features .feature-link i::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px dashed white;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+@-webkit-keyframes rotateEffect {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateEffect {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#features .images-slider .owl-features {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.responsive-img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Tokenomics Area End */

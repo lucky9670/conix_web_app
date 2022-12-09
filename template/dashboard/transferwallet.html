@@ -1,0 +1,171 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Transfer Fund To Package Wallet</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+
+                <!--Background color!-->
+
+
+                <div class="col-md-4 col-12">
+
+
+                    <div class="box box-inverse">
+                        <div class="row">
+                            <div class="col-4  d-flex justify-content-center align-items-center">
+
+                                <button type="button"
+                                    class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+                                        class="fs-20 mdi mdi-currency-usd"></i></button>
+
+                            </div>
+                            <div class="col-8">
+                                <div class="box-body">
+                                    <h3><span class="text-fade1">$</span>0.00</h3>
+                                    <p><strong>Staking Token Wallet
+
+                                        </strong></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box box-inverse ">
+                        
+                        <div class="row">
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+
+                                <button type="button"
+                                    class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+                                        class="fs-20 mdi mdi-currency-usd"></i></button>
+
+                            </div>
+                            <div class="col-8">
+                                <div class="box-body">
+                                    <h3><span class="text-fade1">$</span>0.00</h3>
+                                    <p><strong>Staking Token Wallet
+
+                                        </strong></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-8 col-12">
+                    <div class="box box-inverse">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Transfer Fund To Package Wallet</h4>
+                        </div>
+                        <div class="box-body">
+                        
+                            <form method="post">
+                                {% csrf_token %}
+                                
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Amount to be Transfer($)  </label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" type="text" name="wallet_add" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Transaction Password 
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" name="password" type="password" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-9 col-form-label"></label>
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+
+    </section>
+    <!-- /.content -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="box">
+                    <div class="info">
+                        <div class="container" style="text-align: center">
+                            <h3>Fund Transfer Report</h3>
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered no-margin">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr No.</th>
+                                                <th>Amount</th>
+                                                <th>Transection</th>
+                                                <th>Admin</th>
+                                                <th>Shopping</th>
+                                                <th>Receive</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in data %}
+
+                                            <tr>
+                                                <td>{{forloop.counter}}</td>
+                                                {% if i.coin == 1 %}
+                                                <td>CIPRO</td>
+                                                {% endif %}
+                                                <td>{{i.address}}</td>
+                                                <td>{{i.created_at}}</td>
+                                                {% if i.status == True %}
+                                                <td>Avaiable</td>
+                                                {% endif %}
+                                                <td>{{i.address}}</td>
+                                                <td>{{i.created_at}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,205 @@
+{% extends 'dashboard/main.html' %} {% load static %} {% block content %}
+
+<div class="content-wrapper">
+    <div class="container-full">
+        
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Latest Transactions</h4>
+                            <ul class="box-controls pull-right">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                                <li><a class="box-btn-slide" href="#"></a></li>
+                                <li><a class="box-btn-fullscreen" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered no-margin">
+                                    <thead>
+                                        <tr>
+                                            <th>Transaction Hash</th>
+                                            <th>BTC</th>
+                                            <th>Time</th>
+                                            <th>Miner Preference</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    9d2c7b06bfa0
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>1.2126281 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:01Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>medium</td>
+                                            <td><span class="label label-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    5de67415bfc6
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>0.20522881 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:01Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-warning">Unconfirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    733de15b3cec
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>2.02622033 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:01Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    6793bcfa4f7f
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>2.43220578 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:00Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-danger">Canceled</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    2c66087936b5
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>14.01099978 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:00Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-danger">Canceled</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    51935e53c294
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>0.3024534 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:38:00Z"
+                                                    title="2018-02-01 13:38 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-warning">Unconfirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    a3976b73cf5e
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>0.20518486 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:37:59Z"
+                                                    title="2018-02-01 13:37 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>medium</td>
+                                            <td><span class="label label-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    g011cb48c078
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>2.08039395 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:37:59Z"
+                                                    title="2018-02-01 13:37 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    c6b59368635c
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>42.99698306 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:37:58Z"
+                                                    title="2018-02-01 13:37 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-success">Confirmed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    a261fc1d717d
+                                                </a>
+                                                ...
+                                            </td>
+                                            <td>1.0281818 BTC</td>
+                                            <td>
+                                                <time class="timeago" datetime="2018-02-01T13:37:58Z"
+                                                    title="2018-02-01 13:37 GMT">2 minutes ago</time>
+                                            </td>
+                                            <td>high</td>
+                                            <td><span class="label label-danger">Canceled</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+
+
+            </div>
+            <!-- /.row -->
+    </div>
+    <!-- /.box-body -->
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+
+{% endblock %}

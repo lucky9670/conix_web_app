@@ -1,0 +1,126 @@
+{% extends 'dashboard/main.html' %} {% load static %} {% block content %}
+
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Wallet</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-2"></div>
+                <!-- /.col -->
+                <div class="col-xl-8 col-lg-8">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Wallet Address</h4>
+                            {% if error %}
+								<p class="mb-0 mt-2 text-danger">{{ error }}</p>
+								{% endif %}		
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Wallet Address</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-select" name="cars">
+                                                    <option>Select Coin</option>
+                                                    <option value="1">CPRO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Address</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" name="wallet_add"
+                                                    placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Transaction Password
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="password" type="password"
+                                                    placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label"></label>
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="box">
+                        <div class="info">
+                            <div class="container" style="text-align: center">
+                                <h3>Wallet Address</h3>
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered no-margin">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr No.</th>
+                                                    <th>Wallet</th>
+                                                    <th>Address</th>
+                                                    <th>Amount</th>
+                                                    <th>Created At</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in data %}
+
+                                                <tr>
+                                                    <td>{{forloop.counter}}</td>
+                                                    {% if i.coin == 1 %}
+                                                    <td>CIPRO</td>
+                                                    {% endif %}
+                                                    <td>{{i.address}}</td>
+                                                    <td>{{i.total_wallate_amount}}</td>
+                                                    <td>{{i.created_at}}</td>
+                                                    {% if i.status == True %}
+                                                    <td>Avaiable</td>
+                                                    {% endif %}
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+
+{% endblock %}

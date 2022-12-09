@@ -1,0 +1,121 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Form Wizard</h4>
+                    <div class="d-inline-block align-items-center">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a>
+                                </li>
+                                <li class="breadcrumb-item" aria-current="page">Forms</li>
+                                <li class="breadcrumb-item active" aria-current="page">Form Wizard</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="box">
+                        <div class="info">
+                            <div class="container" style="text-align:center;">
+                                <h1>Your Referal Code</h1>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <div class="container" style="text-align:center;">
+                                <h1>Your Refery</h1>
+                                <br>
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table id="complex_header" class="table table-striped table-bordered display" style="width:100%">
+                                            <thead>
+                                                
+                                                <tr>
+                                                    <th>Sr No.</th>
+                                                    <th>Name</th>
+                                                    <th>Invested Amount</th>
+                                                    <th>With Percent</th>
+                                                    <th>Total Amount</th>
+                                                    <th>Status</th>
+                                                    <th>Type</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in data %}
+                                                <tr>
+                                                    <td>{{forloop.counter}}</td>
+                                                    <td>{{i.user.name}}</td>
+                                                    <td>{{i.invest_amount}}</td>
+                                                    <td>{{i.percentage_amount}}</td>
+                                                    <td>{{i.total_amount}}</td>
+                                                    {% if i.payment_status == 1 %}
+                                                    <td><span class="label label-success">Paid</span></td>
+                                                    {% endif %}
+
+                                                    {% if i.payment_status == 3 %}
+                                                    <td><span class="label label-warning">Pending</span></td>
+                                                    {% endif %}
+                                                    
+                                                    {% if i.payment_status == 2 %}
+                                                    <td><span class="label label-danger">Failed</span></td>
+                                                    {% endif %}
+
+                                                    {% if i.transaction_type == 1 %}
+                                                    <td><span class="label label-success">Deposite</span></td>
+                                                    {% endif %}
+
+                                                    {% if i.transaction_type == 2 %}
+                                                    <td><span class="label label-warning">Widthrow</span></td>
+                                                    {% endif %}
+                                                    <td>{{i.datetime_of_payment}}</td>
+                                                </tr>
+                                                {% endfor %}
+                                                <!--
+                                                <tr>
+                                                    <td colspan="2">Total
+                                                    </td>
+                                                    <td >{{total}}
+                                                    </td>
+                                                    <td >{{invest}}
+                                                    </td>
+                                                </tr>-->
+                                                
+                                            </tbody>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <!-- <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Form Wizard</h4>
+                    <div class="d-inline-block align-items-center">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a>
+                                </li>
+                                <li class="breadcrumb-item" aria-current="page">Forms</li>
+                                <li class="breadcrumb-item active" aria-current="page">Form Wizard</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Investment</h4>
+                        </div>
+                        <!-- /.box-header -->
+                        <form class="form" method="post" , action="{% url 'invest' %}" name="payuForm">
+                            {% csrf_token %}
+                            <div class="box-body">
+                                <h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> Invest Your Payment
+                                </h4>
+                                <hr class="my-15">
+                                <div class="row">
+                                    <input type="hidden" name="firstname" class="form-control"
+                                                value="{{ posted.name|default:'' }}" >
+
+                                    <input type="hidden" name="email" class="form-control"
+                                    value="{{ posted.email|default:'' }}">
+                                    <input type="hidden" name="phone" class="form-control"
+                                    value="{{ posted.phone|default:'' }}">
+                                    <input type="hidden" name="productinfo" class="form-control"
+                                    value="{{ posted.productinfo|default:'' }}">
+
+                                    <td><input type="hidden" name="udf1" value="{{ posted.udf1 }}" /></td>
+                                    <td><input type="hidden" name="udf2" value="{{ posted.udf2 }}" /></td>
+                                    <td><input type="hidden" name="udf3" value="{{ posted.udf3 }}" /></td>
+                                    <td><input type="hidden" name="udf4" value="{{ posted.udf4 }}" /></td>
+                                    <td><input type="hidden" name="udf5" value="{{ posted.udf5 }}" /></td>
+
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Amount</label>
+                                            <input type="number" name="amount" class="form-control"
+                                                placeholder="Amount">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="ti-save-alt"></i> Checkout
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.box -->
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock %}

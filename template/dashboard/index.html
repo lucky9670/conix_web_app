@@ -1,0 +1,648 @@
+﻿{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<div class="container-full">
+		<!-- Main content -->
+		<section class="content">
+			<div class="row">
+				<div class="col-12 col-xl-12">
+					<div class="customhtab_1 box-header px-0 pt-0 border-bottom-0 ">
+						<ul class="nav nav-pills ">
+							<li class=" nav-item "> <a href="#" class="nav-link fw-500" data-bs-toggle="tab"
+									aria-expanded="false">RECTOCOIN </a> </li>
+							<li class="mt-5 text-fade"> <a>/</a> </li>
+							<li class="nav-item "> <a href="#" class="nav-link fw-500" data-bs-toggle="tab"
+									aria-expanded="false">Coins</a> </li>
+							<li class="mt-5 text-fade"> <a>/</a> </li>
+							<li class="nav-item "> <a href="#" class="nav-link active fw-500" data-bs-toggle="tab"
+									aria-expanded="true ">Etherium</a></li>
+						</ul>
+						<ul class="box-controls_2 box-tools pull-right">
+							<li>
+								<div class="dropdown">
+									<button
+										class="btn btn-rounded btn-outline btn-light dropdown-toggle fw-600 mb-5 fs-14 p-1 px-3 me-1 border-0"
+										type="button" data-bs-toggle="dropdown" aria-expanded="false">Earn</button>
+									<div class="dropdown-menu" style="">
+										<a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Edit</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+											Delete</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+											Share</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+									<button
+										class="btn btn-rounded btn-outline btn-light dropdown-toggle fw-600 mb-5 fs-14 p-1 px-3 me-1 border-0"
+										type="button" data-bs-toggle="dropdown" aria-expanded="false">Gaming</button>
+									<div class="dropdown-menu" style="">
+										<a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Edit</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+											Delete</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+											Share</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+									<button
+										class="btn btn-rounded btn-outline btn-light dropdown-toggle fw-600 mb-5 fs-14 p-1 px-3 me-1 border-0"
+										type="button" data-bs-toggle="dropdown" aria-expanded="false">Exchange</button>
+									<div class="dropdown-menu" style="">
+										<a class="dropdown-item" href="#"><i class="fa fa-plus"></i> New</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-pencil"></i> Edit</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>
+											Delete</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+											Share</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="dropdown">
+									<button class="btn btn-rounded btn-outline btn-light dropdown-toggle fw-600 mb-5 fs-14 p-1 px-3 me-1 border-0"
+										type="button" data-bs-toggle="dropdown" aria-expanded="false">Buy</button>
+									<div class="dropdown-menu" style="">
+										<a class="dropdown-item" href="#"><i class="fa fa-plus"></i>New</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-pencil"></i>Ed
+											it</a>
+										<a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i>Delete</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#"><i class="fa fa-share-alt"></i>
+											Share</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-12 col-xl-4">
+					<div class=" box-body">
+						<div class="media align-items-center p-0 Eth_box justify-content-between ">
+							<div class=" d-flex m-0">
+								<a href="#"><i class="cc ETH-alt" title="XRP"></i></a>
+								<div>
+									<h3 class="mt-15 fw-500">RECTOCOIN Trading Pair</h3>
+									<p class="main_font_1 mb-0 fw-500">1 RECT = $1.5</p>
+									<p class="main_font_1 mb-0 fw-500">ID = {{request.user.referal_code}}
+
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-12 col-xl-8">
+					<div class="box box-body">
+						<div class="row g-0 py-2">
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="box-body be-1 border-light">
+									<div class="media align-items-center p-0 justify-content-between">
+										<div class="d-flex m-0">
+											<a href="#"><i class="cc MONA" title="XRP"></i></a>
+											<p class="mt-20 text-fade">Name</p>
+										</div>
+									</div>
+									<div class=" mt-10">
+										<p class="fw-700 mb-0 fs-16 mt-30">{{request.user.name}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4 hidden-down">
+								<div class="box-body be-1 border-light">
+									<div class="media align-items-center p-0 justify-content-between">
+										<div class="d-flex m-0">
+											<a href="#"><i class="cc SCOT" title="XRP"></i></a>
+											<p class="mt-20 text-fade">Email</p>
+										</div>
+									</div>
+									<div class=" mt-10">
+										<p class="fw-700 mb-0 fs-16 mt-30">{{request.user}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4 d-lg-block">
+								<div class="box-body btop-1">
+									<div class="media align-items-center p-0 justify-content-between">
+										<div class="d-flex m-0">
+											<a href="#"><i class="cc QTUM" title="XRP"></i></a>
+											<p class="mt-20 text-fade">Phone</p>
+										</div>
+									</div>
+									<div class=" mt-10">
+										<p class="fw-700 mb-0 fs-16 mt-30">{{request.user.phone}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6 col-md-6 d-lg-block">
+								<div class="box-body btop-1">
+									<label class="form-label">Your Referal Code</label>
+									<div class="input-group">
+
+										<input type="text" class="form-control" id="myInput"
+											value="{{request.user.referal_code}}" readonly>
+										<button type="submit" onclick="myFunction()"
+											class="btn btn-info btn-sm ">Copy</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="col-12 col-xl-12 mt-3">
+					<div class="">
+						<div class="row g-0 mt-5">
+							<div class="col-12 col-lg-4 col-md-4">
+
+								<div class=" mt-20">
+									<div class="row">
+										<div class="col-3">
+											<a class="avatar avatar-lg status-danger" href="#">
+												<img src="{% static 'assets/images/avatar/2.jpg' %}" alt="...">
+											</a>
+										</div>
+										<div class="col-9">
+											<h6 class="fw-500 mb-0">{{request.user.name}}
+											</h6>
+											<p class="mt-3">NA</p>
+										</div>
+
+									</div>
+
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row g-0" style="margin-top: 3rem;">
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Stating Profit</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>147.21
+									</h2>
+
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Stating Level Income</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>0.00
+									</h2>
+
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Level Portfolio</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>0.00
+									</h2>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="row g-0" style="margin-top: 3rem;margin-bottom: 3rem;">
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Level Income</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>0.00
+									</h2>
+
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Rewerd Income</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>0.00
+									</h2>
+
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 col-md-4">
+								<div class="flexbox align-items-center">
+									<div>
+										<p class="no-margin fw-700 fs-16">Profile Picture</p>
+									</div>
+
+								</div>
+								<div class=" mt-20">
+									<h2 class="fw-500 mb-0"><span class="text-fade">$</span>0.00
+									</h2>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.content -->
+
+
+		<!-- Main content -->
+		<section class="content">
+
+			<div class="row">
+
+				<!--Background color!-->
+
+
+				<div class="col-md-4 col-12">
+					<div class="box box-inverse  box-success">
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h4 class="box-title"><strong>Contract Return</strong></h4>
+									<p><span class="text-fade1">$</span>{{data.total_amount}}</p>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="col-md-4 col-12">
+					<div class="box box-inverse  box-success">
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h4 class="box-title"><strong>Return Received</strong></h4>
+									<p><span class="text-fade1">$</span>{{data.return_amount}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-12">
+					<div class="box box-inverse box-success">
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h4 class="box-title"><strong>Return Remaining
+
+										</strong></h4>
+									<p><span class="text-fade1">$</span>{{data.return_receive}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-12">
+					<div class="box box-inverse box-success">
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h4 class="box-title"><strong>Total Income Receive
+										</strong></h4>
+									<p><span class="text-fade1">$</span>{{data.return_amount}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-12">
+					<div class="box box-inverse box-success">
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h4 class="box-title"><strong>Total Withdrawal
+
+										</strong></h4>
+									<p><span class="text-fade1">$</span>0.00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+		</section>
+		<!-- /.content -->
+
+
+		<!-- Main content -->
+		<section class="content">
+
+			<div class="row">
+
+				<!--Background color!-->
+
+
+				<div class="col-md-3 col-12">
+					<div class="box box-inverse box-secondary">
+
+						<div class="box-body">
+							<h2 class=" text-center"><span class="text-fade1">$</span>0.00</h2>
+							<p class="text-center"><strong>Utility Wallet
+
+								</strong></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-12">
+					<div class="box box-inverse box-secondary">
+
+						<div class="box-body">
+							<h2 class=" text-center"><span class="text-fade1">$</span>0.00</h2>
+							<p class="text-center"><strong>Shopping Wallet
+
+								</strong></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-12">
+					<div class="box box-inverse box-secondary">
+
+						<div class="box-body">
+							<h2 class=" text-center"><span class="text-fade1">$</span>0.00</h2>
+							<p class="text-center"><strong>Package Wallet
+								</strong></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-12">
+					<div class="box box-inverse box-secondary">
+
+						<div class="box-body">
+							<h2 class=" text-center"><span class="text-fade1">$</span>0.00</h2>
+							<p class="text-center"><strong>Utility Wallet</strong></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</section>
+		<!-- /.content -->
+
+
+
+		<!-- Main content -->
+		<section class="content">
+
+			<div class="row">
+
+				<!--Background color!-->
+
+
+				<div class="col-md-6 col-12">
+					<div class="box box-inverse box-warning">
+
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h3><span class="text-fade1">$</span>0.00</h3>
+									<p><strong>Staking Token Wallet
+
+										</strong></p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 col-12">
+					<div class="box box-inverse box-info">
+
+						<div class="row">
+							<div class="col-4 d-flex justify-content-center align-items-center">
+
+								<button type="button"
+									class="mb-5 btn btn-outline btn-warning bg-warning text-white btn-sm"><i
+										class="fs-20 mdi mdi-currency-usd"></i></button>
+
+							</div>
+							<div class="col-8">
+								<div class="box-body">
+									<h3><span class="text-fade1">$</span>0.00</h3>
+									<p><strong>Staking Token Wallet
+
+										</strong></p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</section>
+		<!-- /.content -->
+
+
+		<!-- Main content -->
+		<section class="content">
+
+			<div class="row">
+
+				<div class="col-xl-4 col-lg-5">
+					<!-- Profile Image -->
+					<div class="box">
+						<div class="box-body box-profile">
+							<img class="rounded img-fluid mx-auto d-block max-w-150" src="{% static 'images/5.jpg' %}"
+								alt="User profile picture">
+
+							<h3 class="profile-username text-center my-10">{{request.user.name}}</h3>
+
+							<h4 class="text-center mt-0"><i class="fa fa-envelope-o me-10"></i>{{request.user.email}}
+							</h4>
+
+							<div class="row social-states">
+								<div class="col-6 text-end"><a href="#" class="link text-white"><i
+											class="ion ion-ios-people-outline"></i> 254</a></div>
+								<div class="col-6 text-start"><a href="#" class="link text-white"><i
+											class="ion ion-images"></i> 54</a></div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="media-list media-list-hover media-list-divided w-p100 mt-30">
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span class="title">My
+												Profile</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span
+												class="title">Invests</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span class="title">The
+												Wallet</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span
+												class="title">Deposit</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span
+												class="title">Reports</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span
+												class="title">Services</span>
+										</h5>
+										<h5 class="media media-single p-15">
+											<i class="fa fa-arrow-circle-o-right me-10"></i><span
+												class="title">Support</span>
+										</h5>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+				<div class="col-xl-8 col-12">
+					<div class="box">
+						<div class="box-header with-border">
+							<h4 class="box-title">Interactive Area Chart</h4>
+
+							<div class="box-tools pull-right">
+								Real time
+								<div class="btn-group" id="realtime" data-toggle="btn-toggle">
+									<button type="button" class="btn btn-default bg-success btn-sm active"
+										data-toggle="on">On</button>
+									<button type="button" class="btn btn-default bg-danger btn-sm"
+										data-toggle="off">Off</button>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<div id="interactive" style="height: 300px;"></div>
+						</div>
+						<!-- /.box-body-->
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- /.content -->
+	</div>
+</div>
+
+<script src="{% static 'dashboard_assets/js/pages/widget-flot-charts.js' %}"></script>
+
+<script>
+	function myFunction() {
+		/* Get the text field */
+		var copyText = document.getElementById("myInput");
+
+		/* Select the text field */
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+		/* Copy the text inside the text field */
+		navigator.clipboard.writeText(copyText.value);
+
+		/* Alert the copied text */
+		alert("Copied the Link: " + copyText.value);
+	}
+</script>
+
+{% endblock %}

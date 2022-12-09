@@ -1,0 +1,59 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Wallet</h4>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+
+                <div class="col-lg-3">
+                   
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="box card-shadowed box-inverse bg-gradient-danger">
+                        <div class="box-body text-center">
+                            <h5 class="text-uppercase text-muted">Your Wallet Point</h5>
+                            <br>
+                            <h3 class="price">
+                                <sup>$</sup>{{data.point}}
+                                <span>Point</span>
+                            </h3>
+
+                            <hr>
+                            
+
+                            <br><br>
+                            <a class="btn btn-outline btn-white" href="#">Select plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+        </section>
+
+    </div>
+
+</div>
+
+{% endblock %}

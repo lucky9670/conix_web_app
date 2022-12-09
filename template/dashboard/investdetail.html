@@ -1,0 +1,86 @@
+{% extends 'dashboard/main.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container-full">
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Latest Transactions</h4>
+                            <ul class="box-controls pull-right">
+                                <li><a class="box-btn-close" href="#"></a></li>
+                                <li><a class="box-btn-slide" href="#"></a></li>
+                                <li><a class="box-btn-fullscreen" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered no-margin">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr No.</th>
+                                            <th>Transection ID</th>
+                                            <th>Date</th>
+                                            <th>Total Amount</th>
+                                            <th>Invested Amount</th>
+                                            <th>Due Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in data %}
+                                          
+                                        
+                                        <tr>
+                                            <td>{{forloop.counter}}</td>
+                                            <td>
+                                                <a href="#" class="hover-primary">
+                                                    {{i.razorpay_payment_id}}
+                                                </a>
+                                                
+                                            </td>
+                                            <td>{{i.datetime_of_payment}}</td>
+                                            <td>{{i.percentage_amount}}</td>
+                                            <td>{{i.invest_amount}}</td>
+                                            <td>{{i.total_amount}}</td>
+
+                                            {% if i.payment_status == 1 %}
+                                            <td><span class="label label-success">Paid</span></td>
+                                            {% endif %}
+
+                                            {% if i.payment_status == 3 %}
+                                            <td><span class="label label-warning">Pending</span></td>
+                                            {% endif %}
+                                            
+                                            {% if i.payment_status == 2 %}
+                                            <td><span class="label label-danger">Failed</span></td>
+                                            {% endif %}
+
+                                        </tr>
+                                        {% endfor %}
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock %}
